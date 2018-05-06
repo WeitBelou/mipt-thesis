@@ -185,6 +185,8 @@
 \newcommand{\groupnum}[1]{\def\mtgroupnumtext{#1}}
 \newcommand{\supervisor}[1]{\def\mtsupervisortext{#1}}
 \newcommand{\referee}[1]{\def\mtrefereetext{#1}}
+\newcommand{\department}[1]{\def\mtdepartmenttext{#1}}
+\newcommand{\chair}[1]{\def\mtchairtext{#1}}
 
 \newcommand{\addemptypage}{%
     \clearpage \mbox{} \clearpage
@@ -193,13 +195,13 @@
 \renewcommand{\titlepage}{%
     \pagestyle{empty}
     \begin{center}
-        {\bf Министерство образования и науки Российской Федерации \\
+        {\textbf{Министерство образования и науки Российской Федерации}  \\
         Московский физико-технический институт (государственный
         университет) \\ }
         \vspace{1cm}
 
-        Факультет проблем физики и энергетики \\
-        Кафедра космической физики \\
+        \mtdepartmenttext{} \\
+        \mtchairtext{} \\
 
         \vspace{3em}
 
