@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{mipt-thesis}[2016/06/18 Class for the MS thesis in the MIPT]
+\ProvidesClass{mipt-thesis-ms}[2016/06/18 Class for the MS thesis in the MIPT]
 
 %%%%%% Class options %%%%%
 \DeclareOption*{
