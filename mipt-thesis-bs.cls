@@ -48,18 +48,6 @@
 \addto\captionsrussian{\renewcommand{\partname}{Часть}}
 \addto\captionsrussian{\renewcommand{\chaptername}{Глава}}
 \addto\captionsrussian{\renewcommand{\appendixname}{Приложение}}
-%%% Has no effect since babel package switches tags (see https://tex.stackexchange.com/questions/153182/strange-behaviour-on-redefining-contentsname, /usr/share/texlive/texmf-dist/tex/generic/babel-russian/russianb.ldf (Debian))%%%
-%\renewcommand\contentsname{Содержание}
-%\renewcommand\listfigurename{Список иллюстраций}
-%\renewcommand\listtablename{Список таблиц}
-%\renewcommand\bibname{Литература}
-%\renewcommand\indexname{Index}
-%\renewcommand\figurename{Рис.{}}
-%\renewcommand\tablename{Таблица}
-%\renewcommand\partname{Часть}
-%\renewcommand\chaptername{Глава}
-%\renewcommand\appendixname{Приложение}
-
 
 \def\@part[#1]#2{%
     \ifnum \c@secnumdepth >-2\relax
@@ -74,11 +62,11 @@
      \normalfont
      \ifnum \c@secnumdepth >-2\relax
        \huge\bfseries\boldmath \partname~\thepart
-       \par
        \vskip 20\p@
      \fi
      \Huge \bfseries\boldmath #2\par}%
     \@endpart}
+
 \def\@spart#1{%
     {\centering
      \interlinepenalty \@M
@@ -123,6 +111,7 @@
     \Huge \bfseries\boldmath #1\par\nobreak
     \vskip 40\p@
   }}
+
 \def\@makeschapterhead#1{%
   \vspace*{50\p@}%
   {\parindent \z@ \raggedright
@@ -137,10 +126,12 @@
                                    {-3.5ex \@plus -1ex \@minus -.2ex}%
                                    {2.3ex \@plus.2ex}%
                              {\normalfont\Large\raggedright}}
+
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                                      {-3.25ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
                              {\normalfont\Large\sffamily\itshape\raggedright}}
+
 %%%%%%%% Captions %%%%%%%%%%%%%%%%%%%%%%%%%%
 \long\def\@makecaption#1#2{%
   \vskip\abovecaptionskip
