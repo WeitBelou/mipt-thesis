@@ -147,6 +147,7 @@
 %%%%%%%% Headings
 \fancypagestyle{miptthesis}{%
     \fancyhf{}
+    \pagenumbering{arabic}
     \fancyhead[RO, LE]{\thepage}
     \fancyhead[CO]{\leftmark}
     \fancyhead[CE]{\rightmark}
