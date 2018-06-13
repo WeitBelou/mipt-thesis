@@ -168,6 +168,7 @@
 %%%%% Easier references %%%%%
 \newcommand{\formref}[1]{(\ref{#1})}
 \newcommand{\picref}[1]{рис.~\ref{#1}}
+\newcommand{\tabref}[1]{таб.~\ref{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% Titlepage and contents %%%%%
