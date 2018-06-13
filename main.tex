@@ -1,5 +1,8 @@
 \documentclass{mipt-thesis-bs}
 
+\usepackage{mipt-thesis-biblatex}
+\addbibresource{main.bib}
+
 \title{Математическое моделирование высокоскоростного нагружения тканого композитного экрана}
 \author{Косолапов И.\,А.}
 \supervisor{Васюков А.\,В.}
@@ -7,23 +10,23 @@
 \department{Факультет физической и квантовой электроники}
 \chair{Кафедра вакуумной электроники}
 
-
 \begin{document}
-  \frontmatter
-  \titlecontents
+    \frontmatter
+    \titlecontents
 
-  \include{intro}
+    \include{intro}
 
-  \include{overview}
+    \include{overview}
 
-  \include{equations}
+    \include{equations}
 
-  \include{numeric}
+    \include{numeric}
 
-  \include{prog}
+    \include{prog}
 
-  \include{results}
+    \include{results}
 
-  \include{conclusion}
+    \include{conclusion}
 
+    \printbib
 \end{document}
