@@ -17,7 +17,6 @@
 
 % Refs
 \RequirePackage{hyperref}
-\RequirePackage{csquotes}
 
 % Fonts and lang
 \RequirePackage[T1,TS1,T2A]{fontenc}
@@ -31,6 +30,7 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{nopageno}
 \RequirePackage{tocloft}
+\RequirePackage{csquotes}
 
 % Tables
 \RequirePackage{tabularx,multirow}
