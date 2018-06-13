@@ -15,6 +15,10 @@
 \RequirePackage{amsmath,amsthm,amssymb}
 \RequirePackage{mathtext}
 
+% Refs
+\RequirePackage{hyperref}
+\RequirePackage{csquotes}
+
 % Fonts and lang
 \RequirePackage[T1,TS1,T2A]{fontenc}
 \RequirePackage[utf8]{inputenc}
@@ -28,12 +32,9 @@
 \RequirePackage{nopageno}
 \RequirePackage{tocloft}
 
-% Refs
-\RequirePackage{hyperref}
-\RequirePackage{csquotes}
-
 % Tables
 \RequirePackage{tabularx,multirow}
+
 % Nice unit formatting
 \RequirePackage[binary-units]{siunitx}
 
