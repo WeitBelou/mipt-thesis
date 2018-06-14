@@ -16,7 +16,7 @@
 \RequirePackage{mathtext}
 
 % Refs
-\RequirePackage{hyperref}
+\RequirePackage[unicode]{hyperref}
 
 % Fonts and lang
 \RequirePackage[T1,TS1,T2A]{fontenc}
