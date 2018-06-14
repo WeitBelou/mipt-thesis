@@ -64,7 +64,6 @@
 \geometry{right=2cm}
 \geometry{top=2cm}
 \geometry{bottom=2cm}
-\onehalfspace
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% Some dark TeX magic %%%%%
@@ -88,9 +87,6 @@
     \fancyhead[CE]{\rightmark}
 }
 \pagestyle{miptthesis}
-\renewcommand{\chaptermark}[1]{\markboth{\hfill\normalfont #1\hfill}{}}
-\renewcommand{\sectionmark}[1]{\markright{\hfill\large\itshape \S\thesection\quad #1\hfill}}
-\let\partmark=\chaptermark
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
