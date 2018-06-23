@@ -57,15 +57,6 @@
 
 % Headers
 \RequirePackage{fancyhdr}
-\fancypagestyle{plain}{
-    \fancyhf{}
-    \pagenumbering{arabic}
-    \fancyfoot[CO, CE]{\thepage}
-    \renewcommand{\headrulewidth}{0pt}
-    \renewcommand{\footrulewidth}{0pt}
-}
-
-
 \fancypagestyle{miptthesis}{
     \fancyhf{}
     \pagenumbering{arabic}
