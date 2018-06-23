@@ -7,7 +7,7 @@
 }
 \ProcessOptions\relax
 
-\LoadClass[a4paper,12pt]{book}
+\LoadClass[a4paper,14pt]{extbook}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% Useful packages %%%%%
@@ -27,7 +27,6 @@
 \RequirePackage{geometry}
 \RequirePackage{setspace}
 \RequirePackage{indentfirst}
-\RequirePackage{fancyhdr}
 \RequirePackage{nopageno}
 \RequirePackage{tocloft}
 \RequirePackage{csquotes}
@@ -55,16 +54,12 @@
 
 % Source code
 \RequirePackage[outputdir=out]{minted}
-\RequirePackage{graphicx}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% Set up correct formatting %%%%%
 \geometry{left=3cm}
 \geometry{right=2cm}
 \geometry{top=2cm}
 \geometry{bottom=2cm}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% Some dark TeX magic %%%%%
 \addto\captionsrussian{\renewcommand{\contentsname}{Содержание}}
@@ -77,18 +72,6 @@
 \addto\captionsrussian{\renewcommand{\partname}{Часть}}
 \addto\captionsrussian{\renewcommand{\chaptername}{Глава}}
 \addto\captionsrussian{\renewcommand{\appendixname}{Приложение}}
-
-%%%%%%%% Headings
-\fancypagestyle{miptthesis}{%
-    \fancyhf{}
-    \pagenumbering{arabic}
-    \fancyhead[RO, LE]{\thepage}
-    \fancyhead[CO]{\leftmark}
-    \fancyhead[CE]{\rightmark}
-}
-\pagestyle{miptthesis}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% Right TOC numbering %%%%%
 \renewcommand{\cftchapaftersnum}{.}
@@ -160,9 +143,8 @@
 }
 
 \newcommand{\titlecontents}{
-    \titlepage \addemptypage
-    \tableofcontents \addemptypage
-    \pagestyle{miptthesis}
+    \titlepage \clearpage
+    \tableofcontents \clearpage
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
