@@ -47,98 +47,14 @@
 \renewcommand\thesubfigure{\asbuk{subfigure}}
 
 % Set continuous numbering
-\let\counterwithout\relax
-\let\counterwithin\relax
 \RequirePackage{chngcntr}
 \counterwithout{figure}{chapter}
 \counterwithout{equation}{chapter}
 \counterwithout{table}{chapter}
+\counterwithout{section}{chapter}
 
 % Source code
 \RequirePackage[outputdir=out]{minted}
-
-\def\@part[#1]#2{%
-    \ifnum \c@secnumdepth >-2\relax
-      \refstepcounter{part}%
-      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
-    \else
-      \addcontentsline{toc}{part}{#1}%
-    \fi
-    \partmark{#1}%
-    {\centering
-     \interlinepenalty \@M
-     \normalfont
-     \ifnum \c@secnumdepth >-2\relax
-       \huge\bfseries\boldmath \partname~\thepart
-       \vskip 20\p@
-     \fi
-     \Huge \bfseries\boldmath #2\par}%
-    \@endpart}
-
-\def\@spart#1{%
-    {\centering
-     \interlinepenalty \@M
-     \normalfont
-     \Huge \bfseries\boldmath #1\par}%
-    \@endpart}
-
-\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
-                       \if@mainmatter
-                         \refstepcounter{chapter}%
-                         \typeout{\@chapapp\space\thechapter.}%
-                         \addcontentsline{toc}{chapter}%
-                                   {\protect\numberline{\thechapter}#2}%
-                       \else
-                         \addcontentsline{toc}{chapter}{#2}%
-                       \fi
-                    \else
-                      \addcontentsline{toc}{chapter}{#2}%
-                    \fi
-                    \chaptermark{#1}%
-                    \addtocontents{lof}{\protect\addvspace{10\p@}}%
-                    \addtocontents{lot}{\protect\addvspace{10\p@}}%
-                    \if@twocolumn
-                      \@topnewpage[\@makechapterhead{#2}]%
-                    \else
-                      \@makechapterhead{#2}%
-                      \@afterheading
-                    \fi}
-
-
-\def\@makechapterhead#1{%
-  \vspace*{50\p@}%
-  {\parindent \z@ \raggedright \normalfont
-    \ifnum \c@secnumdepth >\m@ne
-      \if@mainmatter
-        \huge\bfseries\boldmath \@chapapp\space \thechapter
-        \par\nobreak
-        \vskip 20\p@
-      \fi
-    \fi
-    \interlinepenalty\@M
-    \Huge \bfseries\boldmath #1\par\nobreak
-    \vskip 40\p@
-  }}
-
-\def\@makeschapterhead#1{%
-  \vspace*{50\p@}%
-  {\parindent \z@ \raggedright
-    \normalfont
-    \interlinepenalty\@M
-    \Huge \bfseries\boldmath  #1\par\nobreak
-    \vskip 40\p@
-  }}
-
-
-\renewcommand\section{\@startsection {section}{1}{\z@}%
-                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
-                                   {2.3ex \@plus.2ex}%
-                             {\normalfont\Large\raggedright}}
-
-\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
-                                     {1.5ex \@plus .2ex}%
-                             {\normalfont\Large\sffamily\itshape\raggedright}}
 
 %%%%%%%% Captions %%%%%%%%%%%%%%%%%%%%%%%%%%
 \long\def\@makecaption#1#2{%
@@ -252,7 +168,7 @@
     \pagestyle{miptthesis}
 
     \setcounter{chapter}{1}
-    \setcounter{section}{1}
+    \setcounter{section}{0}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
