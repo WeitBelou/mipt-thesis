@@ -62,3 +62,41 @@ tasks:
       n_steps: !!int "{{ (25/step)|round|int }}"
   {% endfor %}
 \end{minted}
+
+\section{Mesher}\label{sec:prog-mesher}
+Mesher - модуль отвечающий за генерацию сетки из тонких нитей.
+Принимает на вход данные из секции mesh в задаче из \ref{sec:prog-config}.
+
+Для оптимизации вычислений используется следующий алгоритм.
+
+Все нити в слое делятся на два типа - основа и ут\'{о}к. Основа - прямые нити, вокруг которых оплетаются нити утка.
+
+Далее для основы генерится одна нить и параллельным переносом создаётся группа нитей.
+
+Для утка так же генерится одна нить, но сложнее: сперва описание нити разбивается на повторяющиеся части, как в
+\picref{fig:weft-fiber}
+
+\begin{figure}[H]
+    \centering
+    \caption{Часть утка крупным планом}
+    \label{fig:weft-fiber}
+    \includegraphics[width=1.0\textwidth]{img/weft_fiber.png}
+\end{figure}
+
+Затем она повторяется до полной нити.
+
+В конце все нити сводятся до состояния как на \picref{fig:scheme}
+\begin{figure}[H]
+    \centering
+    \caption{Вид на сетку сверху}
+    \label{fig:scheme}
+    \includegraphics[width=1.0\textwidth]{img/scheme.png}
+\end{figure}
+
+\section{Solver}\label{sec:prog-solver}
+Solver - модуль, считающий деформации в слое ткани.
+
+Принимает на вход параметры, описанные в секции solver из \ref{sec:prog-config}.
+
+\section{Writer}\label{sec:prog-writer}
+Writer - модуль, записывающий результаты в формате, подходящем для визуализации с помощью Paraview.
