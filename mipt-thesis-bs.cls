@@ -3,7 +3,7 @@
 
 %%%%%% Class options %%%%%
 \DeclareOption*{
-    \ClassWarning{myclass}{Unknown option '\CurrentOption'}
+\ClassWarning{myclass}{Unknown option '\CurrentOption'}
 }
 \ProcessOptions\relax
 
@@ -55,6 +55,26 @@
 % Source code
 \RequirePackage[outputdir=out]{minted}
 
+% Headers
+\RequirePackage{fancyhdr}
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \pagenumbering{arabic}
+    \fancyfoot[CO, CE]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+
+\fancypagestyle{miptthesis}{
+    \fancyhf{}
+    \pagenumbering{arabic}
+    \fancyfoot[CO, CE]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+\pagestyle{miptthesis}
+
 %%%%% Set up correct formatting %%%%%
 \geometry{left=3cm}
 \geometry{right=2cm}
@@ -94,16 +114,12 @@
 \newcommand{\department}[1]{\def\mtdepartmenttext{#1}}
 \newcommand{\chair}[1]{\def\mtchairtext{#1}}
 
-\newcommand{\addemptypage}{%
-    \clearpage \mbox{} \clearpage
-}
-
-\renewcommand{\titlepage}{%
+\renewcommand{\titlepage}{
     \pagestyle{empty}
     \begin{center}
-        {\textbf{Министерство образования и науки Российской Федерации}  \\
-        Московский физико-технический институт (государственный
-        университет) \\ }
+    {\textbf{Министерство образования и науки Российской Федерации}  \\
+    Московский физико-технический институт (государственный
+    университет) \\ }
         \vspace{1cm}
 
         \mtdepartmenttext{} \\
@@ -145,6 +161,7 @@
 \newcommand{\titlecontents}{
     \titlepage \clearpage
     \tableofcontents \clearpage
+    \pagestyle{miptthesis}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
