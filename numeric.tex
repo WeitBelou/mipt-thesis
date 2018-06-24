@@ -127,8 +127,100 @@ $-\theta(s)(S_{\alpha \beta}\varepsilon_{\alpha \beta})S_{\alpha \beta}$, где
 при косом ударе пробитие лучше.
 В данном рассчёте данный результат не воспроизводится.
 
-Это приводит нас к необходимости применить методы рассчёта мембраной и отдельных нитей.
-
 \section{Моделирование мембраны}\label{sec:model-membrane}
+Моделирование мембраны осуществлялось с помощью пакета Comsol Multiphysics.
+В результате его работы были получены следующие решения: \picref{pic:comsol-example-1}, \picref{pic:comsol-example-2},
+\picref{pic:comsol-example-3}, \picref{pic:comsol-example-4}, \picref{pic:comsol-example-5}
+
+% TODO(i.kosolapov): Replace with actual comsol data
+
+\begin{figure}[H]
+    \centering
+    \caption{}
+    \label{pic:comsol-example-1}
+    \includegraphics[width=0.8\textwidth]{img/comsol/example_1.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{}
+    \label{pic:comsol-example-1}
+    \includegraphics[width=0.8\textwidth]{img/comsol/example_1.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{}
+    \label{pic:comsol-example-2}
+    \includegraphics[width=0.8\textwidth]{img/comsol/example_2.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{}
+    \label{pic:comsol-example-3}
+    \includegraphics[width=0.8\textwidth]{img/comsol/example_3.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{}
+    \label{pic:comsol-example-4}
+    \includegraphics[width=0.8\textwidth]{img/comsol/example_4.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{}
+    \label{pic:comsol-example-5}
+    \includegraphics[width=0.8\textwidth]{img/comsol/example_5.png}
+\end{figure}
+
+Данное решение хорошо описывает ожидаемое поведение тканного пакета, но, к сожалению, не даёт простого способа
+получить интересующие нас данные по динамике, в частности скорости волнового фронта.
+
+Это приводит нас к необходимости применить методы рассчёта для отдельных нитей.
 
 \section{Моделирование гибкой нити}\label{sec:model-fibers}
+Для моделирования системы гибких нитей была написана программа~\ref{ch:program} реализующая метод
+<<крест-колокол>>~\cite{rakhmatulin}.
+
+Примеры результатов работы данной программы: \picref{pic:fiber-example-1}, \picref{pic:fiber-example-2},
+\picref{pic:fiber-example-3}, \picref{pic:fiber-example-4}, \picref{pic:fiber-example-5}.
+
+\begin{figure}[H]
+    \centering
+    \caption{}
+    \label{pic:fiber-example-1}
+    \includegraphics[width=0.8\textwidth]{img/fiber/example_1.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{}
+    \label{pic:fiber-example-2}
+    \includegraphics[width=0.8\textwidth]{img/fiber/example_2.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{}
+    \label{pic:fiber-example-3}
+    \includegraphics[width=0.8\textwidth]{img/fiber/example_3.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{}
+    \label{pic:fiber-example-4}
+    \includegraphics[width=0.8\textwidth]{img/fiber/example_4.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{}
+    \label{pic:fiber-example-5}
+    \includegraphics[width=0.8\textwidth]{img/fiber/example_5.png}
+\end{figure}
+
+Большая часть рассчётов при различных постановках приводится в~\ref{ch:results}.
