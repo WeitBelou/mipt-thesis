@@ -126,60 +126,9 @@ $-\theta(s)(S_{\alpha \beta}\varepsilon_{\alpha \beta})S_{\alpha \beta}$, где
 Сразу следует отметить, что аналитическое решение и эксперименты по прострелу бронижилетов дают однозначный результат:
 при косом ударе пробитие лучше.
 В данном рассчёте данный результат не воспроизводится.
-Это приводит нас к необходимости применить метод рассчёта отдельных нитей.
+
+Это приводит нас к необходимости применить методы рассчёта мембраной и отдельных нитей.
 
 \section{Моделирование мембраны}\label{sec:model-membrane}
-Математическая модель для гибкой мембраны была описана, например в~\cite{rakhmatulin}.
-
-Пусть по гибкой мембране бесконечной протяженности производится прямой удар острым телом, имеющим с ней лишь одну
-точку соприкосновения.
-Предполагается, что в процессе соударения скорость ударяющего тела $v_0$ остается неизменной, начальная толщина
-мембраны $\delta_0$ постоянна, а сама она до удара не деформирована и расположена в одной плоскости.
-Для решения поставленной задачи целесообразно ввести цилиндрическую систему координат $(r,y)$ с началом в точке удара,
-осью $Or$, расположенной в плоскости мембраны, и осью $Oy$, перпендикулярной к последней и имеющей направление скорости
-$v_0$.
-
-Составим уравнения движения элемента гибкой мембраны, вырезанного двумя меридиональными сечениями и двумя сферами,
-центры которых лежат на оси $Oy$ и совпадают с вершинами конусов, касающихся указанного элемента.
-В силу закона сохранения массы:
-\begin{equation}
-    \rho_0 \delta_0 r dr d\theta = \rho \delta d\theta \sqrt{\left( 1 + \dfrac{\partial w}{\partial r} \right) ^ 2 + \left( \dfrac{\partial u}{\partial r} \right) ^ 2} dr (r + w)
-\end{equation}
-
-Здесь $r$ - координата частицы мембраны до удара (лагранжева координата); $w$, $u$ - соответственно радиальное и
-поперечное смещения частицы; $\rho$ - плотность; $\theta$ - полярный угол.
-
-После несложных преобразований получим итоговую систему уравнений:
-
-\begin{equation}
-    \rho_0 \left( \dfrac{\partial v_{\tau}}{\partial t} - v_n \dfrac{\partial \gamma}{\partial t} \right) = \dfrac{\partial \sigma_t}{\partial r} + \dfrac{\sigma_t - \sigma_{\theta} \cos{\gamma}}{r}
-\end{equation}
-\begin{equation}
-    \rho_0 \left( \dfrac{\partial v_n}{\partial t} - v_n \dfrac{\partial \gamma}{\partial t} \right) = \sigma_t \dfrac{\partial \gamma}{\partial t} + \dfrac{\sigma_{\theta}}{r} \sin{\gamma}
-\end{equation}
-\begin{equation}
-    \dfrac{\partial v_{\tau}}{\partial r} - v_n \dfrac{\partial \gamma}{\partial r} = \dfrac{\partial e_t}{\partial t} \\
-\end{equation}
-\begin{equation}
-    \dfrac{\partial v_n}{\partial r} + v_{\tau} \dfrac{\partial \gamma}{\partial r} = \left( 1 + e_t \right) \dfrac{\partial \gamma}{\partial t}
-\end{equation}
-\begin{equation}
-    \dfrac{\partial e_{\theta}}{\partial t} = \dfrac{1}{2} \left( v_{\tau} \cos{\gamma} - v_n \sin{\gamma} \right)
-\end{equation}
 
 \section{Моделирование гибкой нити}\label{sec:model-fibers}
-Рассмотрим точечный удар по гибкой нити бесконечной длины~\cite{rakhmatulin}.
-
-Если тело в процессе удара соприкасается с нитью на доста точно малом протяжении, область соприкосновения можно
-идеализировать состоящей из одной точки.
-Как будет показано далее, случай точечного удара будет иметь место еще и тогда, когда угол при вершине выпуклого
-тела таков, что при данной скорости удара тело соприкасается с нитью лишь в вершине.
-
-Пусть $\beta_0$ -- угол встречи тела и нити, а начальные характеристики $T_0$, $\rho_0$ и $e_0$ постоянны.
-Тогда основные уравнения имеют вид:
-\begin{equation}
-    \rho_0 \dfrac{\partial^2 x}{\partial t^2} = \dfrac{\partial}{\partial s_0} \left[ \dfrac{T}{1 + e} \left( 1 + \dfrac{\partial x}{\partial s_0} \right) \right]
-\end{equation}
-\begin{equation}
-    \rho_0 \dfrac{\partial^2 y}{\partial t^2} = \dfrac{\partial}{\partial s_0} \left[ \dfrac{T}{1 + e} \dfrac{\partial y}{\partial s_0} \right]
-\end{equation}
