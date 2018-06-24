@@ -7,7 +7,7 @@
 }
 \ProcessOptions\relax
 
-\LoadClass[a4paper,14pt]{extbook}
+\LoadClass[a4paper,14pt]{extreport}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% Useful packages %%%%%
@@ -167,7 +167,7 @@
     \tableofcontents \clearpage
     \pagestyle{miptthesis}
 
-    \setcounter{chapter}{1}
+    \setcounter{chapter}{0}
     \setcounter{section}{0}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
