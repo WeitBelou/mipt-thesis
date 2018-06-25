@@ -1,4 +1,4 @@
-\chapter{Программа}\label{ch:program}
+\section{Программная реализация}\label{ch:program}
 
 Во время работы были написаны программа на языке Python, реализующая расчёты по методу <<крест-колокол>>.
 Она состоит из следующих модулей
@@ -10,7 +10,7 @@
 \end{enumerate}
 Далее подробно рассмотрим каждый модуль.
 
-\section{Config}\label{sec:prog-config}
+\subsection{Config}\label{sec:prog-config}
 Config - модуль, отвечающий за чтение списка задач для программы.
 
 Конфиг представляет собой список задач (tasks) и директорию, для записи результатов (out\_dir).
@@ -84,7 +84,7 @@ tasks:
   {% endfor %}
 \end{minted}
 
-\section{Mesher}\label{sec:prog-mesher}
+\subsection{Mesher}\label{sec:prog-mesher}
 Mesher - модуль отвечающий за генерацию сетки из тонких нитей.
 Принимает на вход данные из секции mesh в задаче из \ref{sec:prog-config}.
 
@@ -99,9 +99,9 @@ Mesher - модуль отвечающий за генерацию сетки и
 
 \begin{figure}[H]
     \centering
-    \caption{Часть утка крупным планом}
     \label{fig:weft-fiber}
     \includegraphics[width=1.0\textwidth]{img/weft_fiber.png}
+    \caption{Часть утка крупным планом}
 \end{figure}
 
 Затем она повторяется до полной нити.
@@ -109,15 +109,15 @@ Mesher - модуль отвечающий за генерацию сетки и
 В конце все нити сводятся до состояния как на \picref{fig:scheme}
 \begin{figure}[H]
     \centering
-    \caption{Вид на сетку сверху}
     \label{fig:scheme}
     \includegraphics[width=1.0\textwidth]{img/scheme.png}
+    \caption{Вид на сетку сверху}
 \end{figure}
 
-\section{Solver}\label{sec:prog-solver}
+\subsection{Solver}\label{sec:prog-solver}
 Solver - модуль, считающий деформации в слое ткани.
 
 Принимает на вход параметры, описанные в секции solver из \ref{sec:prog-config}.
 
-\section{Writer}\label{sec:prog-writer}
+\subsection{Writer}\label{sec:prog-writer}
 Writer - модуль, записывающий результаты в формате, подходящем для визуализации с помощью Paraview.
